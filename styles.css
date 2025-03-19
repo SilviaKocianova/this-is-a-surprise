@@ -2,12 +2,31 @@ body {
     background-color: #57cae7;
     padding: 0;
     margin: 0;
+    font-family: "Winky Sans", sans-serif;
+}
+
+h1 {
+    color: white;
+    font-weight: 400
+}
+
+.zacici {
+
+}
+
+.svatek {
+    color:rgb(18, 121, 180)
+}
+
+.title-box {
+    justify-content: center;
+    display: flex;
+    margin: 8rem;
 }
 
 .container {
     height: 500px;
     width: 500px;
-    border: 5px solid white;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -51,9 +70,10 @@ body {
 
 .cat {
     position: relative;
-    bottom: 100px;
+    bottom: 40px;
     left: 40px;
     z-index: -1;
+    transition: 1s;
 }
 
 .face {
@@ -84,11 +104,112 @@ body {
 
 .ear-l {
     bottom: 55px;
-    transform: rotate (-40deg);
+    transform: rotate(-30deg);
 }
 
 .ear-r {
     bottom: 90px;
     left: 82px;
     transform: rotate(40deg);
+}
+
+.eye-l, .eye-r {
+    height: 15px;
+    width: 13px;
+    position: relative;
+}
+
+.eye-l {
+    bottom: 65px;
+    left: 20px;
+}
+
+.eye-r {
+    bottom: 80px;
+    left: 83px;
+}
+
+.eye {
+    background-color: #434343;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    20% {
+        transform: scaleY(0);
+    }
+}
+
+.nose {
+    width: 0;
+    height: 0;
+    border-top: 10px solid pink;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: relative;
+    bottom: 72px;
+    left: 48px;
+}
+
+.hat {
+    height: 0;
+    width: 0;
+    border-bottom: 100px solid #ff6347;
+    border-left: 40px solid transparent;
+    border-right: 35px solid transparent;
+    bottom: 220px;
+    position: relative;
+    left: 40px;
+    transform: rotate(10deg);
+}
+
+.deco {
+    position: relative;
+    right: 2px;
+    top: 2px;
+}
+
+.d1, .d2, .d3, .d4 {
+    background-color: #ffff9d;
+    height: 40px;
+    width: 5px;
+    position: relative;
+}
+
+.d1 {
+    bottom: 20px;
+}
+
+.d2 {
+    transform: rotate(45deg);
+    bottom: 60px;
+}
+
+.d3 {
+    transform: rotate(90deg);
+    bottom: 100px;
+}
+
+.d4 {
+    transform: rotate(135deg);
+    bottom: 140px;
+}
+
+.box:hover .cat{
+    transform: translateY(-60px);
+}
+
+.shadow {
+    background-color: #97819d;
+    height: 30px;
+    width: 250px;
+    border-radius: 50%;
+    position: relative;
+    top: 285px;
+    left: 125px;
+    opacity: 0.3;
+    z-index: -1;
 }
